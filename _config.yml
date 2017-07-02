@@ -1,1 +1,3 @@
-theme: jekyll-theme-cayman
+# Date/Time
+timezone:	Asia/Shanghai
+highlighter: rouge
