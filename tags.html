@@ -1,0 +1,49 @@
+---
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    {% include head.html title="春秋杰瑞" %}
+    <style type="text/css">
+        .footer-wrap {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+{% include header.html tags="active" %}
+<main class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <ul class="tags">
+                    {% for tag in site.tags %}
+                    {% assign t = tag | first %}
+                    {% assign posts = tag | last %}
+                    <li>{{t | replace:" ","-"}}（{{ posts | size }} 篇）
+                        <ul>
+                            {% for post in posts %}
+                            <li>
+                                <a href="{{ post.url }}">{{ post.title }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% include footer.html %}
+{% include script.html %}
+
+<!-- Bootstrap Further Configuration
+1. https://gist.github.com/3fdeb9368d8bffc0d8267da0fac010cd
+2. https://getbootstrap.com/customize/?id=3fdeb9368d8bffc0d8267da0fac010cd
+-->
+</body>
+</html>
