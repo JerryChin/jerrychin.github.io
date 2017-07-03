@@ -10,8 +10,11 @@
     <meta name="author" content="春秋杰瑞">
     <title>春秋杰瑞</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=latin-ext" rel="stylesheet">
+
     <!-- Bootstrap -->
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link href="css/blog.css" rel="stylesheet">
     <link href="css/syntax.css" rel="stylesheet">
@@ -39,7 +42,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li class="active-item"><a href="#">主页 <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="#">主页 <span class="sr-only">(current)</span></a></li>
             <li><a href="#">主题列表</a></li>
             <li><a href="#">阅读清单</a></li>
             <li><a href="#">关于我</a></li>
@@ -56,7 +59,7 @@
             <div class="col-md-8 col-md-offset-2">
 				{% for post in site.posts %}
 					<article class="article-wrap">
-	                    <header class="article-header page-header text-center">
+	                    <header class="page-header text-center">
 	                        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 	                        <ul class="list-inline article-meta">
 	                            <li><span class="publish-date">发布于 {{ post.date | date: "%Y年%-m月%-d日"}}</span></li>
@@ -80,15 +83,14 @@
 <footer class="footer-wrap">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12"><div class="text-center footer-copyright">版权所有 (C) 春秋杰瑞</div></div>
+                <div class="col-md-12"><div class="text-center">版权所有 (C) 春秋杰瑞</div></div>
             </div>
         </div>
 </footer>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<script src="js/bootstrap.min.js"></script>
 <script>
     var f = [String.fromCharCode, [], $(".feedback"), "", ""];
     var ma = [0x6D, 0x65, 0x74, 0x72, 0x78, 0x71, 0x69, 0x6E];
@@ -100,7 +102,10 @@
 
     f[2].attr("href", "".concat(mt.reduce(function(t, e) {return t.concat(f[0](e));}, f[4]), "to",f[0](s[2]), f[1].
     concat(ma, s[0], dbe, s[1], e).reduce(function(t, e) {return t.concat(f[0](e));}, f[3]), f[0](s[3]), "subject", f[0](s[4]), "反馈问题"));
-
 </script>
+<!-- Bootstrap Further Configuration
+1. https://gist.github.com/3fdeb9368d8bffc0d8267da0fac010cd
+2. https://getbootstrap.com/customize/?id=3fdeb9368d8bffc0d8267da0fac010cd
+-->
 </body>
 </html>

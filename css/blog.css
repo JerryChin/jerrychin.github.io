@@ -1,39 +1,9 @@
-/*
- * Import web-fonts
- */
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Cabin');
-
-/*
- * Globals
- */
-html, body {
-    font-family: "Noto Sans", Futura, Source Sans Pro, sans-serif;
-    font-size: 1em;
-    line-height: 1.2;
-    background-color: #E0F7FA;
-}
 
 /*
  * Navigation
  */
 .navbar-blog {
-    background-color: #0097A7;
     border-bottom: 3px solid #00BCD4;
-}
-
-.active-item {
-    background-color: #00BCD4;
-}
-.navbar-blog .navbar-brand {
-    color: #FFF;
-    padding: 10px 0 10px 1em;
-    font-size: 1.5em;
-    line-height: 30px;
-}
-
-.navbar-blog .navbar-brand:hover {
-    color: #B2EBF2;
 }
 
 .navbar-blog .navbar-brand .chinese{
@@ -44,22 +14,30 @@ html, body {
     font-family: Cabin;
 }
 
-.navbar-default .navbar-nav>li>a {
-    color: #E0F7FA;
-}
-
-.navbar-default .navbar-nav>li>a:hover {
-    color: #B2EBF2;
-}
-
-
 .navbar-blog .feedback {
-    font-size: 0.9em;
+    font-size: 14px;
 }
 
 .navbar-blog .feedback .glyphicon-envelope{
     vertical-align: -1px;
 }
+@media (min-width: 768px) {
+    .navbar-blog .active:after {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        margin-left: -5px;
+        vertical-align: middle;
+        content: " ";
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid;
+        border-left: 5px solid transparent;
+        color: #00BCD4;
+    }
+}
+
 
 /*
  * Article
@@ -68,7 +46,7 @@ html, body {
     background-color: #fff;
     padding: 10px 20px 10px 20px;
     margin-bottom: 10px;
-
+    font-size: 1.2em;
 }
 
 .article-content {
@@ -76,28 +54,19 @@ html, body {
     color: #444;
 }
 
-.article-content p, li{
-    line-height: 1.4;
-}
-
-.article-header .article-meta {
+.article-meta {
     margin:0;
     font-size: 0.9em;
-}
-
-.main-content {
-    min-height: 786px;
 }
 
 /*
  *  Footer
  */
+
 .footer-wrap {
     background-color: #414141;
     line-height: 1.5;
-}
-
-.footer-copyright{
     color: #ddd;
     font-size: 0.9em;
+    margin-top: 50px;
 }
