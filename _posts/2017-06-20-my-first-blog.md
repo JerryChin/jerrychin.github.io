@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 史蒂夫·乔布斯简介
-category:  "科技"
+tags:  ["科技"]
 ---
 
 * 英文名：Steve Jobs

@@ -1,11 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-<title>{{ page.title }}</title>
-</head> 
+    {% include head.html title=page.title %}
+</head>
 <body>
-My Post Layout
-<p>
-{{ page.content }}
-</p>
+{% include header.html index="void" %}
+<main class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <article class="article-wrap">
+                    <header class="page-header text-center">
+                        <h2>{{ page.title }}</h2>
+                        <ul class="list-inline article-meta">
+                            <li><span class="publish-date">发布于 {{ page.date | date: "%Y年%-m月%-d日"}}</span></li>
+                            <li><span>所属主题 &nbsp;<a href="#" class="tag">#{{ page.tags[0] }}</a></span></li>
+                        </ul>
+
+                    </header>
+                    <div class="article-content">
+                        {{ page.content }}
+                    </div>
+                    <footer class="arctile-footer">
+                    </footer>
+                </article>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% include footer.html %}
+{% include script.html %}
+
+<!-- Bootstrap Further Configuration
+1. https://gist.github.com/3fdeb9368d8bffc0d8267da0fac010cd
+2. https://getbootstrap.com/customize/?id=3fdeb9368d8bffc0d8267da0fac010cd
+-->
 </body>
+</html>
