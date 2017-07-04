@@ -2,6 +2,11 @@
 /*
  * Navigation
  */
+.navbar-brand {
+    font-size: 24px;
+    line-height: 50px;
+}
+
 .navbar-blog {
     border-bottom: 3px solid #00BCD4;
 }
