@@ -1,3 +1,5 @@
 .idea/
 _site/
 *.iml
+my.pid
+error.out

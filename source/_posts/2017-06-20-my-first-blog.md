@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 史蒂夫·乔布斯简介
 tags:  ["科技"]
 ---

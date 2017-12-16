@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  后起之秀 Essential 手机特色功能速览
 tag: ["科技"]
 ---
