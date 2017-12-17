@@ -8,9 +8,6 @@ encoding: UTF-8
 # Rendering drafts
 show_drafts: false
 
-# Use source as source root
-source: source
-
 # free-maker default values
 # match by either path or type 'posts' 'pages'
 defaults:
