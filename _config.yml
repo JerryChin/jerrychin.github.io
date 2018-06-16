@@ -15,6 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: 春秋杰瑞（Jerry Chin）
 email: metrxqin@gmail.com
+author: Jerry Chin
 description: >- # this means to ignore newlines until "baseurl:"
   知识就是力量 ——弗朗西斯·培根
 baseurl: "/" # the subpath of your site, e.g. /blog
