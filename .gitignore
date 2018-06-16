@@ -3,3 +3,5 @@ _site/
 *.iml
 my.pid
 error.out
+.sass-cache
+.jekyll-metadata
