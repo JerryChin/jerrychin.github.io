@@ -24,7 +24,8 @@ permalink: /about/
 src="//music.163.com/outchain/player?type=2&id=419485661&auto=0&height=32"></iframe>
 
 
-<img src="/assets/img/baby-posture.jpg" alt="my cat laying on the desk" style="max-height: 100%; height: auto" />
+<img src="/assets/img/baby-posture.jpg" alt="my cat laying on the desk, gazing forward." 
+    style="max-height: 100%; height: auto" title="Big Brother is watching you." />
 
 
 
