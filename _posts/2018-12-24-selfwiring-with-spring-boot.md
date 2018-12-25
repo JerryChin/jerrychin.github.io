@@ -12,8 +12,7 @@ This method is tailored to Spring-based web application, does not work well with
 
 ### [processInjectionBasedOnServletContext](https://docs.spring.io/spring/docs/5.0.9.RELEASE/javadoc-api/org/springframework/web/context/support/SpringBeanAutowiringSupport.html#processInjectionBasedOnServletContext-java.lang.Object-javax.servlet.ServletContext-)
 
-This one requires that we have explicitly reference to the current servlet context, 
-
+This one requires that we have explicitly reference to the current servlet context, we can use [`ServletContextInitializer`](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/web/servlet/ServletContextInitializer.html) to get the reference to the servlet context, as demonstrated in the following snippet:
 
 ```java
 @SpringBootApplication
@@ -39,7 +38,7 @@ public class Application implements ServletContextInitializer {
 }
 ```
 
-Now, we have access to the servlet context, or we can use ServletContext with it to autowire our dummy class.
+Now, we have access to the servlet context, let us autowire our dummy class.
 
 
 ```java
