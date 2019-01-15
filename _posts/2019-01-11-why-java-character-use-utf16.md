@@ -1,6 +1,7 @@
 ---
 title: 为什么 Java 内部使用 UTF-16 表示字符串？
 tags:  ["Programming"]
+comments: true
 ---
 
 ### 背景
