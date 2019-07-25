@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: 春秋杰瑞（Jerry Chin）
+title: 春秋杰瑞
 email: metrxqin@gmail.com
 author: Jerry Chin
 description: >- # this means to ignore newlines until "baseurl:"
@@ -26,7 +26,7 @@ github_username: JerryChin
 # Build settings
 highlighter: rouge
 markdown: kramdown
-theme: jekyll-theme-hacker
+theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 

@@ -12,8 +12,6 @@ permalink: /about/
 
 對政治、哲學、經濟、科技、人文等學科都有涉獵，但並不是很深入。
 
-崇尚理性討論。
-
 
 
 <!--- 
@@ -27,8 +25,6 @@ src="//music.163.com/outchain/player?type=2&id=419485661&auto=0&height=32"></ifr
     style="max-height: 100%; height: auto" title="Big Brother is watching you." />
 
 
-
-<!-- Contact me by emailing to meijie.qin@eques.com.cn! -->
 
 
 
