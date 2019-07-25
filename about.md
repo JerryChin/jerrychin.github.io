@@ -1,9 +1,8 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
-
 一名熱愛人文的IT 從業者。
 
 
@@ -29,7 +28,7 @@ src="//music.163.com/outchain/player?type=2&id=419485661&auto=0&height=32"></ifr
 
 
 
-
+<!-- Contact me by emailing to meijie.qin@eques.com.cn! -->
 
 
 
