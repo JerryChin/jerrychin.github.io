@@ -1,9 +1,8 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
-
 一名熱愛人文的IT 從業者。
 
 
@@ -12,8 +11,6 @@ permalink: /about/
 平日里愛聽搖滾🎸，偏愛大衛鮑伊和皇后樂隊。時而癡迷于古典音樂🎼，最為推崇柴可夫斯基的「第一鋼琴協奏曲」。
 
 對政治、哲學、經濟、科技、人文等學科都有涉獵，但並不是很深入。
-
-崇尚理性討論。
 
 
 
@@ -26,8 +23,6 @@ src="//music.163.com/outchain/player?type=2&id=419485661&auto=0&height=32"></ifr
 
 <img src="/assets/img/baby-posture.jpg" alt="my cat laying on the desk, gazing forward." 
     style="max-height: 100%; height: auto" title="Big Brother is watching you." />
-
-
 
 
 

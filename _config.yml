@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: 春秋杰瑞（Jerry Chin）
+title: 春秋杰瑞
 email: metrxqin@gmail.com
 author: Jerry Chin
 description: >- # this means to ignore newlines until "baseurl:"
@@ -26,19 +26,19 @@ github_username: JerryChin
 # Build settings
 highlighter: rouge
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 
 # free-maker default values
 # match by either path or type 'posts' 'pages'
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+#defaults:
+#  -
+#    scope:
+#      path: ""
+#      type: "posts"
+#    values:
+#      layout: "post"
 
 minima:
   date_format: "%Y-%-m-%-d"
