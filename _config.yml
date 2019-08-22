@@ -19,7 +19,7 @@ author: Jerry Chin
 description: >- # this means to ignore newlines until "baseurl:"
   知识就是力量 ——弗朗西斯·培根
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://jerrychin.me" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jerrychin.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: MetrxQin
 github_username: JerryChin
 
