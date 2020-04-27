@@ -23,7 +23,7 @@ Sun 和 Google 编码规约的着力点都集中在 Java 命名和语法形式�
 1. 首先，Maven 引入 PMD 插件
 
 
-```
+```xml
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-pmd-plugin</artifactId>
@@ -33,16 +33,61 @@ Sun 和 Google 编码规约的着力点都集中在 Java 命名和语法形式�
 </plugin>
 ```
 
-2. 把阿里巴巴的 PMD 实现添加到 PMD 插件依赖
+2. 把阿里巴巴的 PMD 实现添加到 PMD 插件依赖，同时配置 rulesets
 
+```xml
+<configuration>
+    <printFailingErrors>true</printFailingErrors>
+    <rulesets>
+        <ruleset>/rulesets/java/ali-comment.xml</ruleset>
+        <ruleset>/rulesets/java/ali-concurrent.xml</ruleset>
+        <ruleset>/rulesets/java/ali-constant.xml</ruleset>
+        <ruleset>/rulesets/java/ali-exception.xml</ruleset>
+        <ruleset>/rulesets/java/ali-flowcontrol.xml</ruleset>
+        <ruleset>/rulesets/java/ali-naming.xml</ruleset>
+        <ruleset>/rulesets/java/ali-oop.xml</ruleset>
+        <ruleset>/rulesets/java/ali-orm.xml</ruleset>
+        <ruleset>/rulesets/java/ali-other.xml</ruleset>
+        <ruleset>/rulesets/java/ali-set.xml</ruleset>
+    </rulesets>
+</configuration>
+
+<dependencies>
+    <dependency>
+        <groupId>com.alibaba.p3c</groupId>
+        <artifactId>p3c-pmd</artifactId>
+        
+        <!-- 这里的版本号比较关键 -->
+        <version>1.3.6</version>
+    </dependency>
+</dependencies>
 ```
+
+这里需要注意阿里巴巴的 PMD 实现引用了 `net.sourceforge.pmd` 包下的依赖，而 PMD 插件也引用了这些依赖，如果两边引入的包版本不一致则可能发生版本冲突。
+
+通过检查阿里巴巴的 PMD 实现 和 PMD 插件 POM 来确认两边版本是否一致。
+
+
+3. PMD 插件默认项目执行到 verify 阶段才执行，如果你需要测试之前先检查则需要如下配置：
+
+```xml
+<executions>
+    <execution>
+        <phase>validate</phase>
+        <goals>
+            <goal>check</goal>
+        </goals>
+    </execution>
+</executions>
+```
+
+4.  下面是完整的配置(以下示例双方引用的 `net.sourceforge.pmd` 包下的依赖版本一致）
+
+```xml
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-pmd-plugin</artifactId>
-    
-    <!--- 这里的版本号比较关键 --->
     <version>3.0</version>
-    
     <configuration>
         <printFailingErrors>true</printFailingErrors>
         <rulesets>
@@ -58,34 +103,21 @@ Sun 和 Google 编码规约的着力点都集中在 Java 命名和语法形式�
             <ruleset>/rulesets/java/ali-set.xml</ruleset>
         </rulesets>
     </configuration>
+    <executions>
+        <execution>
+            <phase>validate</phase>
+            <goals>
+                <goal>check</goal>
+            </goals>
+        </execution>
+    </executions>
     <dependencies>
         <dependency>
             <groupId>com.alibaba.p3c</groupId>
             <artifactId>p3c-pmd</artifactId>
-            
-            <!-- 这里的版本号比较关键 -->
             <version>1.3.6</version>
         </dependency>
     </dependencies>
 </plugin>
 ```
-
-这里需要注意阿里巴巴的 PMD 实现引用了 `net.sourceforge.pmd` 包下的依赖，而 PMD 插件也引用了这些依赖，如果两边引入的包版本不一致则可能发生版本冲突。
-
-通过检查阿里巴巴的 PMD 实现 和 PMD 插件 POM 来确认两边版本是否一致，以上示例双方版本一致。
-
-
-3. PMD 插件默认项目执行到 verify 阶段才执行，如果你需要测试之前先检查则需要如下配置：
-
-```
-<executions>
-    <execution>
-        <phase>validate</phase>
-        <goals>
-            <goal>check</goal>
-        </goals>
-    </execution>
-</executions>
-```
-
 
