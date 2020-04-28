@@ -20,7 +20,7 @@ Sun 和 Google 编码规约的着力点都集中在 Java 命名和语法形式�
 
 
 
-1. 首先，Maven 引入 PMD 插件
+Step 1. 首先，Maven 引入 PMD 插件
 
 
 ```xml
@@ -33,7 +33,7 @@ Sun 和 Google 编码规约的着力点都集中在 Java 命名和语法形式�
 </plugin>
 ```
 
-2. 把阿里巴巴的 PMD 实现添加到 PMD 插件依赖，同时配置 rulesets
+Step 2. 把阿里巴巴的 PMD 实现添加到 PMD 插件依赖，同时配置 rulesets
 
 ```xml
 <configuration>
@@ -68,7 +68,7 @@ Sun 和 Google 编码规约的着力点都集中在 Java 命名和语法形式�
 通过检查阿里巴巴的 PMD 实现 和 PMD 插件 POM 来确认两边版本是否一致。
 
 
-3. PMD 插件默认项目执行到 verify 阶段才执行，如果你需要测试之前先检查则需要如下配置：
+Step 3. PMD 插件默认项目执行到 verify 阶段才执行，如果你需要测试之前先检查则需要如下配置：
 
 ```xml
 <executions>
@@ -81,7 +81,7 @@ Sun 和 Google 编码规约的着力点都集中在 Java 命名和语法形式�
 </executions>
 ```
 
-4.  下面是完整的配置(以下示例双方引用的 `net.sourceforge.pmd` 包下的依赖版本一致）
+Step 4.  下面是完整的配置(以下示例双方引用的 `net.sourceforge.pmd` 包下的依赖版本一致）
 
 ```xml
 <plugin>
